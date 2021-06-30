@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FirstExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="섭씨" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbo-s7-Y8Y">
+                                <rect key="frame" x="185" y="64" width="44" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="섭씨온도를 입력하시오." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aco-yo-ul4">
+                                <rect key="frame" x="20" y="104" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="화씨" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gz5-sc-mKW">
+                                <rect key="frame" x="185.5" y="168" width="43.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="변환하기를 누르면 화씨 온도가 나타납니다." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NJj-td-Bin">
+                                <rect key="frame" x="20" y="208" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BO6-Hz-AVi">
+                                <rect key="frame" x="170.5" y="282" width="73" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="변환하기"/>
+                                <connections>
+                                    <action selector="doConvert:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pEi-Du-0rY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="NJj-td-Bin" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3r6-q2-oB6"/>
+                            <constraint firstItem="pbo-s7-Y8Y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4SQ-IY-2gZ"/>
+                            <constraint firstItem="BO6-Hz-AVi" firstAttribute="top" secondItem="NJj-td-Bin" secondAttribute="bottom" constant="40" id="4Td-RV-H6N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NJj-td-Bin" secondAttribute="trailing" constant="20" id="Bss-N5-Ihh"/>
+                            <constraint firstItem="Gz5-sc-mKW" firstAttribute="top" secondItem="Aco-yo-ul4" secondAttribute="bottom" constant="30" id="Fc7-hQ-Qx3"/>
+                            <constraint firstItem="Gz5-sc-mKW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M1y-Pj-g3F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Aco-yo-ul4" secondAttribute="trailing" constant="20" id="Nfx-gK-EgI"/>
+                            <constraint firstItem="BO6-Hz-AVi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tsh-ft-CJ3"/>
+                            <constraint firstItem="Aco-yo-ul4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="a6p-Ru-oHa"/>
+                            <constraint firstItem="Aco-yo-ul4" firstAttribute="top" secondItem="pbo-s7-Y8Y" secondAttribute="bottom" constant="10" id="bBK-nr-c4K"/>
+                            <constraint firstItem="NJj-td-Bin" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="l3A-gP-P1C"/>
+                            <constraint firstItem="NJj-td-Bin" firstAttribute="top" secondItem="Gz5-sc-mKW" secondAttribute="bottom" constant="10" id="ose-uh-toY"/>
+                            <constraint firstItem="Aco-yo-ul4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u6l-m2-B2p"/>
+                            <constraint firstItem="pbo-s7-Y8Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wgC-vg-dw7"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="5MV-Yj-Usp" appends="YES" id="QtD-vj-gBv"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="label2" destination="NJj-td-Bin" id="S3O-8H-EBD"/>
+                        <outlet property="lable1" destination="Aco-yo-ul4" id="0yM-WY-mmr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="5MV-Yj-Usp">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="vDN-8M-e38"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="98.550724637681171" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
